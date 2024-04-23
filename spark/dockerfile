@@ -1,0 +1,16 @@
+FROM bitnami/spark:latest
+
+WORKDIR /app
+
+COPY spark-job.py /app/spark-job.py
+
+USER root
+RUN install_packages python3-pip
+
+RUN pip3 install kafka-python requests
+
+RUN chmod +x /app/spark-job.py
+
+USER 1001
+
+CMD ["/opt/bitnami/spark/bin/spark-submit", "--master", "spark://spark-master:7077", "/app/spark-job.py"]
