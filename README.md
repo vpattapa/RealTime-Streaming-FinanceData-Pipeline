@@ -11,7 +11,7 @@ This project sets up a robust, distributed data processing pipeline using Apache
 - **Docker**: Containers for each component ensure isolation and scalability.
 
 ## Directory Structure
-
+```
 finhub-data-pipeline/
 │
 ├── docker-compose.yml
@@ -32,7 +32,7 @@ finhub-data-pipeline/
 └── cassandra/
     ├── init.cql
     └── Dockerfile
-
+```
 ## Setup
 
 To get started, make sure Docker and Docker Compose are installed on your system.
